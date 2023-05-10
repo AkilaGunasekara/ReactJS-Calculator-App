@@ -1,3 +1,6 @@
+
+I developed a calculator application using React and Typescript that incorporates fundamental concepts of react.js and Typescript. In addition, I employed Material UI as a component library, which significantly enhances development efficiency and offers numerous useful features right out of the box.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
