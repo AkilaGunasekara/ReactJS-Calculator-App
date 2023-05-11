@@ -2,9 +2,9 @@ import { Button, Grid } from "@mui/material";
 
 
 
-interface GridDigitButtonProps{
+interface GridDigitButtonProps {
     digit: String;
-    enterDigit:(digit:string) => void;
+    enterDigit: (digit: string) => void;
     xs?: number;
 }
 export const GridDigitButton: React.FC<GridDigitButtonProps> = ({
@@ -12,11 +12,15 @@ export const GridDigitButton: React.FC<GridDigitButtonProps> = ({
     enterDigit,
     xs=3
 })=> {
-    return(
+    return (
         <Grid item xs={xs}>
-            <Button fullWidth variant ="outlined" onClick={() => enterDigit(digit)}>
+            <Button variant="contained" onClick={() => enterDigit("digit")}>
                 {digit}
+            
             </Button>
         </Grid>
-    )
-}
+      );
+      ;
+};
+
+    
