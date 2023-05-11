@@ -2,36 +2,36 @@ import { Button, Grid, styled } from "@mui/material";
 
 
 
-interface GridOparationButtonProps {
-    operation: String;
+interface GridOperationButtonProps {
+    operation: string;
     selectOperation: (operation: string) => void;
     selectedOperation: string;
 }
 
 const StyledButton = styled(Button)<{ selected: boolean }>((props) => ({
-    backgroundColor:"blue",
-    borderColor: props.selected ? "red" : "blue",
+    backgroundColor:"black",
+    borderColor: props.selected ? "red" : "black",
     
-    }))
+    }));
 
-export const GridOparationButton: React.FC<GridOparationButtonProps> = ({
+export const GridOparationButton: React.FC<GridOperationButtonProps> = ({
     operation,
     selectedOperation,
     selectOperation,
 })=> {
     return (
-        <Grid item>
-            <Button 
-            variant="contained" 
-            onClick={() => selectOperation("operation")}>
+        <Grid item xs={3}>
+            <StyledButton 
+            fullWidth
+            variant="outlined" 
+            onClick={() => selectOperation(operation)}
             selected={selectedOperation === operation}
-            
+            >
                 {operation}
             
-            </Button>
+            </StyledButton>
         </Grid>
       );
-      ;
 };
 
     
