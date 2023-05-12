@@ -28,7 +28,7 @@ export const GridOparationButton: React.FC<GridOperationButtonProps> = ({
             selected={selectedOperation === operation}
             >
                 {operation}
-            
+                
             </StyledButton>
         </Grid>
       );

@@ -1,6 +1,5 @@
 import { Button, Container, Grid, Paper, styled } from '@mui/material';
 import React, { useState } from 'react';
-import theme from './theme';
 import { GridOparationButton } from './GridOperationButton';
 import { GridDigitButton } from './GridDigitButton';
 
@@ -19,17 +18,27 @@ const CalculatorBase = styled(Paper) (({theme})=> ({
   borderRadius: 15
 
 }));
+
 function App() {
   const [currentValue, setCurrentValue] = useState("0");
   const[Operation, setOperation] = useState(""); 
+  const[prevValue, setPrevValue] = useState("");
+  const[overwrite, setOverwrite] = useState("");  
 
   const selectOperation = (operation: string) => {
     setOperation(operation);
   };
 
 
-  const setDigit = (digit: string) => {
-    setCurrentValue(digit);
+  const setDigit = (digit: string) => { 
+    
+
+    if(overwrite && digit !== "."){
+      setCurrentValue(digit);
+    }
+
+    setCurrentValue('${currentValue}${digit}');
+
   };
 
 
