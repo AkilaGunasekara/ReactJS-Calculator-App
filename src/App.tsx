@@ -23,7 +23,15 @@ function App() {
   const [currentValue, setCurrentValue] = useState("0");
   const[Operation, setOperation] = useState(""); 
   const[prevValue, setPrevValue] = useState("");
-  const[overwrite, setOverwrite] = useState("");  
+  const[overwrite, setOverwrite] = useState("");
+  
+  const equals = () => {
+    const val = calculate();
+    setCurrentValue(`${val}`);
+    setPrevValue("");
+    setOperation("");
+    setOverwrite(true);
+  };
 
   const selectOperation = (operation: string) => {
     setOperation(operation);
