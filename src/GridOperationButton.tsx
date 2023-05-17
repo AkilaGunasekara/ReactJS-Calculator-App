@@ -10,7 +10,7 @@ interface GridOperationButtonProps {
 
 const StyledButton = styled(Button)<{ selected: boolean }>((props) => ({
     backgroundColor:"black",
-    borderColor: props.selected ? "red" : "black",
+    borderColor: props.selected ? "blue" : "black",
     
     }));
 
